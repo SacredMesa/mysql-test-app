@@ -1,0 +1,47 @@
+<h2>Search results</h2>
+<div class="">
+  <table class="table">
+    <thead>
+      <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Category</td>
+        <td>Rating</td>
+        <td>Installs</td>
+      </tr>
+    </thead>
+
+    <tbody>
+      {{#each recs}}
+        <tr>
+          <td>{{this.app_id}}</td>
+          <td>{{this.name}}</td>
+          <td>{{this.category}}</td>
+          <td>{{this.rating}}</td>
+          <td>{{this.installs}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
+
+<tr>
+  <td>
+    <form action="/search" method="GET">
+      <input type="hidden" name="q" value="{{q}}">
+      <input type="hidden" name="offset" value="{{offset}}">
+
+    </form>
+  </td>
+</tr>
+
+<form action="/search" method="POST">
+  <button type="submit" name="prev_btn" value="prev">
+    Prev
+  </button>
+  <button type="submit" name="next_btn" value="next">
+    Next
+  </button>
+
+
+</form>

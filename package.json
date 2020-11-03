@@ -3,5 +3,15 @@
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
     "mysql2": "^2.2.5"
-  }
+  },
+  "name": "mysql-test-app",
+  "version": "1.0.0",
+  "description": "Practicing MySQL",
+  "main": "main.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
 }
