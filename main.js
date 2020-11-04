@@ -58,7 +58,7 @@ app.engine('hbs', handlebars({
 }));
 app.set('view engine', 'hbs');
 
-// Routers
+// Application
 app.get('/', (req, res) => {
     res.status(200);
     res.type('text/html');
@@ -78,7 +78,7 @@ app.get('/search', async (req, res) => {
         // Perform the query
         result = await conn.query(SQL_FIND_BY_NAME, [`%${db_search}%`, 10]);
         const recs = result[0];
-
+        
         console.log('recs = ', recs);
 
     } catch (e) {
